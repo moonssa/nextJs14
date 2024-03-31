@@ -1,0 +1,45 @@
+.container {
+  max-width: 90%;
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(32, 31, 31);
+  padding: 100px 50px;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 800;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.category {
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  list-style: none;
+  border-radius: 8px;
+}
+
+.category a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border-color: yellow;
+  /* outline-offset: 1px;
+  outline-color: yellow; */
+}
+
+/* 포커스 관련 스타일은 그대로 유지 */
+.category li:focus {
+  outline: blue;
+}

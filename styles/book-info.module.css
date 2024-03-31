@@ -1,0 +1,81 @@
+.container {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(32, 31, 31);
+  padding: 100px 50px;
+  overflow: hidden; /* 컨테이너 넘치는 내용 숨김 */
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 800;
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 반응형 그리드 */
+  gap: 30px;
+}
+
+.category {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  list-style: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 10px 7px 4px rgba(73, 65, 65, 0.4);
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.category a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category img {
+  max-height: 65%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bookInfo {
+  padding: 20px 20px;
+}
+.bookInfo h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.bookInfo h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0097e6;
+  margin-bottom: 20px;
+}
+.bookInfo span {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.bookInfo span:hover {
+  color: #e84118;
+  border: 2px solid #e84118;
+}
+/* 포커스 관련 스타일은 유지 */
+.category li:focus {
+  outline: blue;
+}

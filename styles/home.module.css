@@ -1,0 +1,41 @@
+.container {
+  max-width: 90%;
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(32, 31, 31);
+  padding: 100px 50px;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 800;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.category {
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  list-style: none;
+  border-radius: 8px;
+  transform: scale(1);
+  box-shadow: 2px 5px 7px 4px rgba(73, 65, 65, 0.25);
+  transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.category a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border-color: whitesmoke;
+}
