@@ -3,7 +3,9 @@ import styles from "../styles/book-info.module.css";
 
 async function getBooks(id: string) {
   const response = await (
-    await fetch(`https://books-api.nomadcoders.workers.dev/list?name=${id}`)
+    await fetch(
+      `https://books-api.nomadcoders.workers.dev/list?name=${id}`
+    )
   ).json();
   return response.results;
 }
@@ -13,7 +15,10 @@ export default async function BooksInfo({ id }: { id: string }) {
   const books = booksInfo.books;
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{booksInfo.list_name}</h3>
+      <div>
+        <h3 className={styles.title}>{booksInfo.list_name}</h3>
+      </div>
+
       <div className={styles.categories}>
         {books.map((book) => (
           <li key={book.rank} className={styles.category}>
@@ -23,7 +28,10 @@ export default async function BooksInfo({ id }: { id: string }) {
               <h3>{book.title}</h3>
               <h5>{book.author}</h5>
 
-              <Link href={`${book.amazon_product_url}`} target="_blank">
+              <Link
+                href={`${book.amazon_product_url}`}
+                target="_blank"
+              >
                 <span>Buy now &rarr;</span>
               </Link>
             </div>
